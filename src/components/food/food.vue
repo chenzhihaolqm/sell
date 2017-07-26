@@ -33,7 +33,7 @@
         </div>
         <split></split>
         <div class="rating">
-          <h1 class="title">商品评价</h1>
+          <h1 class="title">商品评价测试</h1>
           <ratingselect :ratings="food.ratings" :select-type="selectType" :only-content="onlyContent" :desc="desc"></ratingselect>
           <div class="rating-wrapper">
             <ul v-show="food.ratings && food.ratings.length">
