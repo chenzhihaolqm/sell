@@ -35,7 +35,7 @@
       </ul>
     </div>
     <shopcart ref="shopcart" :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></shopcart>
-    <food :food="selectedFood" ref="food"></food>
+    <food :food="selectedFood" @add="drop" ref="food"></food>
   </div>
 
 </template>
@@ -114,7 +114,6 @@
               this.foodsScroll.scrollToElement(el,300);
           },
           selectFood(food){
-              console.log(food);
               this.selectedFood = food;
               this.$refs.food.show();
           },
@@ -231,10 +230,6 @@
           .price
             font-weight:700
             line-height:24px
-          .cartcontrol-wrapper
-            position:absolute
-            right:0
-            bottom:12px
             .now
               margin-right: 8px
               font-size: 14px
@@ -243,4 +238,8 @@
               font-size: 10px
               color: rgb(147,153,159)
               text-decoration:line-through
+          .cartcontrol-wrapper
+            position:absolute
+            right:0
+            bottom:12px
 </style>
